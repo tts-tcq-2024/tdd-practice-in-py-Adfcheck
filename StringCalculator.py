@@ -1,3 +1,4 @@
+import re
 def add(numbers):
     if not numbers:
         return 0
@@ -9,7 +10,7 @@ def add(numbers):
     else:
         delimiter = ',|\n'
 
-    import re
+    
     numbers = re.sub(f"[{re.escape(delimiter)}]", ',', numbers)
 
     number_list = list(map(int, numbers.split(',')))
